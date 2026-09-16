@@ -1689,32 +1689,6 @@ a { color: inherit; text-decoration: none; }
   gap: 0.65rem;
 }
 
-.lang-switch {
-  display: inline-flex;
-  border: 1px solid var(--border-medium);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: var(--bg-surface-2);
-}
-
-.lang-btn {
-  border: none;
-  background: transparent;
-  color: var(--text-secondary);
-  font: inherit;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0.35rem 0.55rem;
-  cursor: pointer;
-  letter-spacing: 0.04em;
-}
-
-.lang-btn:hover { color: #fff; background: var(--bg-surface-hover); }
-.lang-btn.active {
-  background: rgba(77, 228, 255, 0.15);
-  color: var(--accent-blue);
-}
-
 .nav-auth-guest { display: flex; align-items: center; }
 
 .nav-login {

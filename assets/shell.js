@@ -11,31 +11,6 @@
     return node;
   }
 
-  function renderLangSwitch() {
-    const wrap = el("div", "lang-switch");
-    wrap.setAttribute("role", "group");
-    wrap.setAttribute("aria-label", I18n ? I18n.t("lang.label") : "Language");
-
-    ["en", "ru"].forEach((code) => {
-      const btn = el("button", "lang-btn");
-      btn.type = "button";
-      btn.dataset.lang = code;
-      btn.textContent = code.toUpperCase();
-      btn.setAttribute("aria-pressed", I18n && I18n.getLang() === code ? "true" : "false");
-      if (I18n && I18n.getLang() === code) btn.classList.add("active");
-      btn.addEventListener("click", () => {
-        if (I18n) I18n.setLang(code);
-        wrap.querySelectorAll(".lang-btn").forEach((b) => {
-          const on = b.dataset.lang === code;
-          b.classList.toggle("active", on);
-          b.setAttribute("aria-pressed", on ? "true" : "false");
-        });
-      });
-      wrap.appendChild(btn);
-    });
-    return wrap;
-  }
-
   function closeAllDropdowns(except) {
     document.querySelectorAll(".nav-dropdown.open").forEach((d) => {
       if (d !== except) d.classList.remove("open");
@@ -121,7 +96,6 @@
     if (!host) return;
 
     host.innerHTML = "";
-    host.appendChild(renderLangSwitch());
 
     const session = Auth && Auth.readSession();
     if (session) {
