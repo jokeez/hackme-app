@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <title>Developer Login · HackMe Useful PoW</title>
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="assets/logo-hex.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo-hex.png">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="app-body auth-page">
+  <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <div class="hub-canvas">
+      <header class="site-top">
+        <nav class="navbar" aria-label="Site">
+          <a class="navbar-brand brand-link" href="index.html">
+            <img class="brand-logo" src="assets/logo-hex.png" alt="HackMe" />
+            <span class="brand-mark">HackMe</span><span class="brand-accent">Useful PoW</span>
+          </a>
+          <button type="button" class="navbar-toggler" id="nav-toggle" data-i18n-aria="nav.menuToggle" aria-label="Toggle menu">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="navbar-collapse" id="navbar-nav">
+            <ul class="navbar-nav">
+              <li><a href="index.html" class="nav-link" data-nav-page="index.html" data-i18n="nav.home">Home</a></li>
+              <li><a href="index.html#listings" class="nav-link" data-nav-page="#listings" data-i18n="nav.coins">Coins</a></li>
+              <li><a href="compare.html" class="nav-link" data-nav-page="compare.html" data-i18n="nav.compare">Compare</a></li>
+              <li><a href="docs.html" class="nav-link" data-nav-page="docs.html" data-i18n="nav.docs">Docs</a></li>
+              <li class="nav-more">
+                <details>
+                  <summary class="nav-link" data-i18n="nav.more">More</summary>
+                  <div class="nav-more-menu">
+                    <a href="status.html" class="dropdown-item" data-nav-page="status.html" data-i18n="nav.status">Status</a>
+                    <a href="verified.html" class="dropdown-item" data-nav-page="verified.html" data-i18n="nav.verified">Get verified</a>
+                    <a href="index.html#submit" class="dropdown-item" data-i18n="sidebar.submit">Submit</a>
+                    <a href="https://hackme.tech/" class="dropdown-item" target="_blank" rel="noreferrer" data-i18n="sidebar.hackmeHub">HackMe hub</a>
+                  </div>
+                </details>
+              </li>
+            </ul>
+            <div class="navbar-tools" id="navbar-tools"></div>
+            <a href="index.html#submit" class="btn btn-primary btn-list" data-i18n="nav.listProject">List project</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="auth-main">
+        <div class="card auth-card">
+          <div class="card-body">
+            <h1 class="auth-title" data-i18n="login.title">Developer login</h1>
+            <p class="auth-sub text-muted" data-i18n="login.sub">Prototype — no backend. Demo login or a local session.</p>
+            <p class="auth-message hidden" id="login-message" role="status"></p>
+            <form id="login-form" class="auth-form">
+              <div class="form-field">
+                <label for="login-email" data-i18n="login.email">Email</label>
+                <input id="login-email" name="email" type="email" autocomplete="username" placeholder="developer@example.com">
+              </div>
+              <div class="form-field">
+                <label for="login-password" data-i18n="login.password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password">
+              </div>
+              <div class="btn-row">
+                <button type="submit" class="btn btn-primary" data-i18n="login.submit">Sign in</button>
+                <button type="button" class="btn btn-secondary" id="btn-demo-login" data-i18n="login.demo">Demo login</button>
+              </div>
+            </form>
+            <p class="auth-footer-note">
+              <span data-i18n="login.noAccount">No account?</span>
+              <a href="index.html#submit" data-i18n="login.register">Submit a listing</a>
+              · <a href="index.html" data-i18n="login.back">Back to index</a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/translate-guard.js"></script>
+  <script src="assets/i18n.js"></script>
+  <script src="assets/auth.js"></script>
+  <script src="assets/layout.js"></script>
+  <script src="assets/shell.js"></script>
+  <script src="assets/wow.js"></script>
+  <script src="assets/login-page.js"></script>
+</body>
+</html>

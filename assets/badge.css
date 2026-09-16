@@ -1,0 +1,47 @@
+/* Useful PoW Index — embeddable badge */
+.upow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font: 600 0.8rem/1.2 Inter, system-ui, sans-serif;
+  text-decoration: none;
+  border: 1px solid rgba(77, 228, 255, 0.35);
+  background: #0a1018;
+  color: #e8f7ff;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.upow-badge::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #4de4ff;
+  box-shadow: 0 0 8px rgba(77, 228, 255, 0.7);
+}
+.upow-badge:hover {
+  border-color: #4de4ff;
+  background: #0e1622;
+}
+.upow-badge.upow-verified {
+  border-color: rgba(46, 204, 113, 0.45);
+}
+.upow-badge.upow-verified::before {
+  background: #2ecc71;
+  box-shadow: 0 0 8px rgba(46, 204, 113, 0.6);
+}
+.upow-badge.upow-watchlist {
+  border-color: rgba(52, 152, 219, 0.45);
+}
+.upow-badge.upow-watchlist::before {
+  background: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.55);
+}
+.upow-badge.upow-draft {
+  border-color: rgba(149, 165, 166, 0.45);
+}
+.upow-badge.upow-draft::before {
+  background: #95a5a6;
+  box-shadow: none;
+}

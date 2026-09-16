@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate">
+  <title>Badge · HackMe Useful PoW</title>
+  <link rel="stylesheet" href="assets/badge.css">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #05070d; font-family: "IBM Plex Sans", system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+  <div id="badge-root"></div>
+  <script src="assets/core.js"></script>
+  <script>
+    (async () => {
+      const Core = window.UsefulPowCore;
+      const id = new URLSearchParams(location.search).get("id") || "hackme";
+      const registry = await Core.loadRegistry("./assets/projects.json");
+      const p = Core.getProjectById(registry, id) || (registry.projects || [])[0];
+      const root = document.getElementById("badge-root");
+      if (!p || !root) {
+        root.textContent = "Project not found";
+        return;
+      }
+      const status = p.status || "draft";
+      const href = `project.html?id=${encodeURIComponent(p.id)}`;
+      const label =
+        status === "verified"
+          ? "Verified · HackMe Useful PoW"
+          : status === "watchlist"
+            ? "Watchlist · HackMe Useful PoW"
+            : "Listed · HackMe Useful PoW";
+      root.innerHTML = `<a class="upow-badge upow-${Core.escapeAttr(status)}" href="${Core.escapeAttr(href)}">${Core.escapeHtml(label)}</a>`;
+      document.title = `${p.ticker || p.id} badge · HackMe Useful PoW`;
+    })();
+  </script>
+</body>
+</html>

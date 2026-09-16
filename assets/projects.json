@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-16",
+  "index_meta": {
+    "title": "HackMe \u00b7 Useful PoW Index",
+    "tagline": "Curated useful mining registry for the HackMe ecosystem",
+    "poll_seconds": 30
+  },
+  "projects": [
+    {
+      "id": "hackme",
+      "name": "HackMe Network",
+      "ticker": "HMC",
+      "status": "verified",
+      "useful_work": "WASM security fuzz \u00b7 useful GPU PoW \u00b7 B2B audit escrow",
+      "useful_type": "security-fuzz",
+      "algorithm": "Useful-PoW (HTTP coordinator)",
+      "site": "https://hackme.tech/",
+      "docs": "https://hackme.tech/docs.html",
+      "pool": "https://hackme.tech/",
+      "explorer": "https://hackme.tech/pool/explorer",
+      "github": "https://github.com/jokeez/hackme",
+      "downloads": "https://hackme.tech/downloads.html",
+      "api": {
+        "type": "hackme",
+        "metrics": "/pool/api/global/metrics",
+        "work_stats": "/pool/coordinator/api/work/stats"
+      },
+      "tags": [
+        "live",
+        "gpu",
+        "fuzz",
+        "b2b"
+      ],
+      "verified_at": "2026-08-23",
+      "summary": "Hash power runs real WASM Dig gates and Hunt ASAN depth \u2014 not empty lottery hashing. Primary lane for miners and security orders.",
+      "review_checklist": {
+        "useful_work": true,
+        "public_metrics": true,
+        "miner_path": true,
+        "honest_scope": true
+      },
+      "lanes": [
+        {
+          "tag": "Mine",
+          "name": "HMC + SUP",
+          "description": "Useful-PoW on the official coordinator. Windows installer or Linux tarball \u2014 worker in minutes.",
+          "link": "https://hackme.tech/downloads.html"
+        },
+        {
+          "tag": "Audit",
+          "name": "Fuzz & orders",
+          "description": "Local node escrow \u2192 WASM gate \u2192 customer report + CI gate. Hub pool fills distributed work.",
+          "link": "https://hackme.tech/developers.html"
+        },
+        {
+          "tag": "Storage",
+          "name": "HMS preview",
+          "description": "Encrypted B2B backup and proof-of-storage lane \u2014 prelaunch on hub.",
+          "link": "https://hackme.tech/coin-hms.html"
+        },
+        {
+          "tag": "Research",
+          "name": "L1 \u00b7 OSS series",
+          "description": "Public BTC30 and OSS CVE Watch research \u2014 honest scope, verifiable reports.",
+          "link": "https://hackme.tech/research.html"
+        }
+      ],
+      "economics": [
+        {
+          "metric": "Base block reward",
+          "value": "0.010000 HMC",
+          "notes": "Before halving milestones"
+        },
+        {
+          "metric": "Halving interval",
+          "value": "2,102,400 blocks",
+          "notes": "Programmatic emission throttle"
+        },
+        {
+          "metric": "Tail floor",
+          "value": "0.002000 HMC",
+          "notes": "Long-run security budget"
+        },
+        {
+          "metric": "Transfer fee split",
+          "value": "70% service \u00b7 30% burn",
+          "notes": "On-chain fee units"
+        },
+        {
+          "metric": "SUP accrual",
+          "value": "~8% of qualifying HMC",
+          "notes": "Hybrid pool loyalty lane"
+        }
+      ],
+      "pools": [
+        {
+          "name": "HackMe PoH (official hub)",
+          "url": "https://hackme.tech/",
+          "fee": "Hybrid settlement",
+          "payout": "HMC block + SUP accrual",
+          "coordinator": "HTTP useful-PoW (not Stratum)",
+          "region": "Global",
+          "live": true,
+          "notes": "Public coordinator \u00b7 miner IPs redacted on stats"
+        }
+      ],
+      "exchange_listings": [
+        {
+          "exchange_id": "hackme-exchange",
+          "pair": "HMC/USD",
+          "status": "planned",
+          "volume_24h": null,
+          "price_usd": null,
+          "trading_url": "https://hackme.tech/roadmap.html",
+          "trust_note": "Own exchange paper \u2192 soft live"
+        },
+        {
+          "exchange_id": "foreign-pow-cex",
+          "pair": "HMC/USDT",
+          "status": "roadmap",
+          "volume_24h": null,
+          "price_usd": null,
+          "trading_url": "https://hackme.tech/listing.html",
+          "trust_note": "After liquidity + own CEX traction"
+        }
+      ],
+      "listing_hub": "https://hackme.tech/listing.html",
+      "logo": "assets/logo-hex.png"
+    },
+    {
+      "id": "gridcoin-watch",
+      "name": "Gridcoin",
+      "ticker": "GRC",
+      "status": "watchlist",
+      "useful_work": "BOINC distributed computing rewards \u2014 scientific workloads",
+      "useful_type": "research-pow",
+      "algorithm": "Proof-of-stake + BOINC magnitude",
+      "site": "https://gridcoin.us/",
+      "docs": "https://wiki.gridcoin.us/",
+      "pool": "https://gridcoin.us/",
+      "github": "https://github.com/gridcoin-community/Gridcoin-Research",
+      "tags": [
+        "watchlist",
+        "research",
+        "cpu"
+      ],
+      "summary": "Watchlist entry \u2014 classic useful-compute project (not pure hash lottery). Pending API adapter for live stats in this index.",
+      "static_stats": {
+        "hashrate": "n/a (magnitude)",
+        "workers": "\u2014",
+        "height": "\u2014",
+        "reward": "\u2014",
+        "difficulty": "\u2014",
+        "status": "watchlist",
+        "ok": false
+      }
+    }
+  ]
+}

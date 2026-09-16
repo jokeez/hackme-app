@@ -1,0 +1,23 @@
+{
+  "name": "HackMe \u00b7 Useful PoW Index",
+  "short_name": "HackMe PoW",
+  "description": "Curated useful mining registry with live read-only pool stats \u2014 HackMe ecosystem prototype",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#05070d",
+  "theme_color": "#05070d",
+  "icons": [
+    {
+      "src": "logo-hex.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
