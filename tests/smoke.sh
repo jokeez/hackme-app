@@ -37,7 +37,7 @@ check_status "$BASE/assets/core.js" 200
 check_status "$BASE/assets/index.js" 200
 check_status "$BASE/assets/projects.json" 200
 check_status "$BASE/assets/manifest.webmanifest" 200
-check_status "$BASE/assets/favicon.svg" 200
+check_status "$BASE/assets/logo-hex.png" 200
 check_status "$BASE/assets/layout.js" 200
 check_status "$BASE/assets/ui.js" 200
 check_status "$BASE/assets/translate-guard.js" 200
