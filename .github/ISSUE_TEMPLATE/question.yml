@@ -1,0 +1,12 @@
+name: Listing / question
+description: Ask about the Index or propose a useful-PoW listing
+title: "[question] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: q
+    attributes:
+      label: Question or listing idea
+      description: Project name, why hashrate is useful, link to evidence.
+    validations:
+      required: true

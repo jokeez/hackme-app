@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://hackme.tech/contacts.html
+    about: Private report — see SECURITY.md
+  - name: HackMe hub
+    url: https://hackme.tech
+    about: Main network site
+  - name: Core repo
+    url: https://github.com/jokeez/hackme
+    about: Pool / node / Dig·Hunt

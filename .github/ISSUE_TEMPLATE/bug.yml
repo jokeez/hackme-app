@@ -1,0 +1,20 @@
+name: Bug
+description: Broken page, listing, or docs on the Index
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "No secrets. Security → contacts.html."
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps / URL
+    validations:
+      required: true
